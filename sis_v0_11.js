@@ -499,8 +499,8 @@ class SIS{
             let W = 2;
     
             while(W > 1){
-                U = Math.random();
-                V = Math.random();
+                U = 2 * Math.random() - 1;
+                V = 2 * Math.random() - 1;
                 W = U * U + V * V;
             }
     
