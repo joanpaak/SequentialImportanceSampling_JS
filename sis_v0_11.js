@@ -187,6 +187,7 @@ class SIS{
         
         this.log = {
             k : [["N", "k"]],
+            nEff : [["N", "N eff"]],
             nAccepted : [["N", "N Accepted"]],
             particleSets : new Array()
         }
@@ -242,7 +243,7 @@ class SIS{
         this.checkAndFixProbArray(this.w);
 
         if(this.opt.logging){
-            this.log.nAccepted.push(
+            this.log.nEff.push(
                 [
                     this.y.nrow,
                     this.nEff(this.w)
