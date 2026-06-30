@@ -304,7 +304,7 @@ class SIS{
 
             this.w = this.arrMult(this.w, lh);
             this.w = this.normArr(this.w);
-            this.replaceInvalidWithZeroes(this.w);
+            this.checkAndFixProbArray(this.w);
 
             if(this.nEff(this.w) < this.rejuvenationLimitN){
                 for(let j = 0; j < this.opt.nRejuvenationSteps; j++){
