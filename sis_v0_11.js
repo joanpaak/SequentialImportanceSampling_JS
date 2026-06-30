@@ -306,7 +306,7 @@ class SIS{
             this.w = this.normArr(this.w);
             this.checkAndFixProbArray(this.w);
 
-            if(this.nEff(this.w) < this.rejuvenationLimitN){
+            if(this.nEff(this.w) < this.rejuvenationLimitN | forceRejuvenation){
                 for(let j = 0; j < this.opt.nRejuvenationSteps; j++){
                     this.rejuvenate();
                 }
