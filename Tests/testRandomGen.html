@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <script src="../sis_v0_11.js"></script>
+    <script src="../Libs/statsmath_0_11.js"></script>
+    <script>
+        let sis = new SIS({
+            drawFromPrior : function(n){
+                return new Matrix({nrow : 1, ncol : 1});
+            },
+            prior : function(theta){
+                return 0;
+            },
+            likelihood : function(y, theta){
+                return 0;
+            },
+            nParticles : 10
+        });
+
+    let x = sis.tRandom(1000, 0, 1, 100);
+    </script>
+</html>
