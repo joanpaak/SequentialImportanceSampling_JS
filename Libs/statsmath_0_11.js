@@ -20,9 +20,12 @@ class Stats{
         return x;
     }
 
-    //static dlogis(x){
-    // TODO: implement
-    //}
+    static dlogis(x, mu, s){
+        let numerator = Math.exp(-(x-mu)/s);
+        let denominator = s * Math.pow(1 + Math.exp(-(x-mu)/s), 2);
+
+        return numerator / denominator;
+    }
 
     // https://en.wikipedia.org/wiki/Logistic_distribution
     static plogis(p, mu, s){
